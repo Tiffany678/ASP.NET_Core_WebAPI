@@ -103,17 +103,17 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "filterColumnName",
+        "Name": "filterOn",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "filterInputValue",
+        "Name": "filterQuery",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "sortByColumnName",
+        "Name": "sortBy",
         "Type": "System.String",
         "IsRequired": false
       },
