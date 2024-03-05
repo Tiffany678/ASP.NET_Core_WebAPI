@@ -12,8 +12,8 @@ using NZWalks.API.Data;
 namespace NZWalks.API.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    [Migration("20240304024524_Adding Images Tables")]
-    partial class AddingImagesTables
+    [Migration("20240305032324_Adding Image Table")]
+    partial class AddingImageTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

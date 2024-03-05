@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NZWalks.API.Controllers.ImagesController",
+    "Method": "Upload",
+    "RelativePath": "api/Images/Upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NZWalks.API.Controllers.RegionsController",
     "Method": "GetAll",
     "RelativePath": "api/Regions",
@@ -111,9 +137,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NZWalks.API.Controllers.WalkingController",
+    "ContainingType": "NZWalks.API.Controllers.WalksController",
     "Method": "Create",
-    "RelativePath": "api/Walking",
+    "RelativePath": "api/Walks",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -127,9 +153,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NZWalks.API.Controllers.WalkingController",
+    "ContainingType": "NZWalks.API.Controllers.WalksController",
     "Method": "GetAll",
-    "RelativePath": "api/Walking",
+    "RelativePath": "api/Walks",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -146,116 +172,6 @@
       },
       {
         "Name": "sortBy",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "isAscending",
-        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NZWalks.API.Controllers.WalkingController",
-    "Method": "GetById",
-    "RelativePath": "api/Walking/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NZWalks.API.Controllers.WalkingController",
-    "Method": "Update",
-    "RelativePath": "api/Walking/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "updateWalkRequestDto",
-        "Type": "NZWalks.API.Models.DTO.UpdateWalkRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NZWalks.API.Controllers.WalkingController",
-    "Method": "Delete",
-    "RelativePath": "api/Walking/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NZWalks.API.Controllers.WalksController",
-    "Method": "Create",
-    "RelativePath": "api/Walks",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "addWalkRequestDto",
-        "Type": "NZWalks.API.Models.DTO.AddWalkRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NZWalks.API.Controllers.WalksController",
-    "Method": "GetAll",
-    "RelativePath": "api/Walks",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "filterColumnName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "filterInputValue",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "sortByColumnName",
         "Type": "System.String",
         "IsRequired": false
       },
