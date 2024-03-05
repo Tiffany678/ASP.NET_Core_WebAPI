@@ -6,6 +6,7 @@ using NZWalks.API.CustomActionFilters;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
 using NZWalks.API.Repositories;
+using System.Text.Json;
 
 namespace NZWalks.API.Controllers
 {
@@ -16,42 +17,36 @@ namespace NZWalks.API.Controllers
     {
         private readonly IRegionRepository regionRepository;
         private readonly IMapper mapper;
+        private readonly ILogger<RegionsController> logger;
 
-        public RegionsController(IRegionRepository regionRepository, IMapper mapper)
+        public RegionsController(IRegionRepository regionRepository, IMapper mapper, ILogger<RegionsController> logger)
         {
 
             this.regionRepository = regionRepository;
             this.mapper = mapper;
+            this.logger = logger;
         }
 
         // GET ALL REGIONS
         // GET: https://localhost:portnumber/api/regions
         [HttpGet]
-        [Authorize(Roles = "Reader, Writer")]
+        //[Authorize(Roles = "Reader, Writer")]
 
         public async Task<IActionResult> GetAll()
         {
+       //     logger.LogInformation("GetAllRegions Action Method was invoked");
+       //     logger.LogWarning("This is a warning log");
+       //     logger.LogError("This is a error log");
+
             // Get data from Database - Domain models
             var regionsDomain = await regionRepository.GetAllAsync();
 
-            //   // Map Domain models to DTOs
-            //   var regionsDto = new List<RegionDto>();
-            //   foreach (var regionDomain in regionsDomain)
-            //   {
-            //       regionsDto.Add(new RegionDto
-            //       {
-            //           Id = regionDomain.Id,
-            //           Code = regionDomain.Code,
-            //           Name = regionDomain.Name,
-            //           RegionImageUrl = regionDomain.RegionImageUrl
-            //
-            //       });
-            //   }
 
             // a smiple way to map models to DTOs
             var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
 
             // Return DTOs
+            logger.LogInformation($"Finished GetAllRegions request with data: {JsonSerializer.Serialize(regionsDomain)}");
             return Ok(regionsDto);
         }
 
@@ -95,7 +90,6 @@ namespace NZWalks.API.Controllers
                 var regionDto = mapper.Map<RegionDto>(regionDomainModel);
 
                 return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
-            
 
         }
 

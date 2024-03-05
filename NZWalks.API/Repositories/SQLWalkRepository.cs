@@ -57,7 +57,8 @@ namespace NZWalks.API.Repositories
                 if(sortByColumnName.Equals("Name", StringComparison.OrdinalIgnoreCase)){
                     walks = isAscending ? walks.OrderBy(x => x.Name): walks.OrderByDescending(x => x.Name);
                 }
-                else if (sortByColumnName.Equals("Length", StringComparison.OrdinalIgnoreCase))
+                // else if (sortByColumnName.Equals("Length", StringComparison.OrdinalIgnoreCase))
+                else if (sortByColumnName.Equals("lengthInKm", StringComparison.OrdinalIgnoreCase))
                 {
                     walks = isAscending ? walks.OrderBy(x => x.LengthInKm) : walks.OrderByDescending(x => x.LengthInKm);
                 }
