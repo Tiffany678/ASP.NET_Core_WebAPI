@@ -30,7 +30,7 @@ namespace NZWalks.API.Controllers
         // GET ALL REGIONS
         // GET: https://localhost:portnumber/api/regions
         [HttpGet]
-        //[Authorize(Roles = "Reader, Writer")]
+        [Authorize(Roles = "Reader, Writer")]
 
         public async Task<IActionResult> GetAll()
         {
@@ -55,7 +55,7 @@ namespace NZWalks.API.Controllers
         // GET: https://localhost:portnumber/api/regions/{id}
         [HttpGet]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Reader, Writer")]
+       [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             //var region = dbContext.Regions.Find(id);

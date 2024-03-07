@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="App-nzwalks-eastus-dev01" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Project\\ASP\.NET\\NZWalks\\NZWalks\.API\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="NZWalks.API.Data.NZWalksAuthDbContext" description="" value="Data Source=sqlserver-nzwalks-eastus-dev01.database.windows.net,1433;Initial Catalog=sqldb-nzwalks-eastus-dev01;User ID=yingjie188;Password=Tiffany2000!" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Project\\ASP\.NET\\NZWalks\\NZWalks\.API\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\NZWalks\.API\.Data\.NZWalksAuthDbContext\.sql$" />
+  </parameter>
+  <parameter name="NZWalks.API.Data.NZWalksDbContext" description="" value="Data Source=sqlserver-nzwalks-eastus-dev01.database.windows.net,1433;Initial Catalog=sqldb-nzwalks-eastus-dev01;User ID=yingjie188;Password=Tiffany2000!" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Project\\ASP\.NET\\NZWalks\\NZWalks\.API\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\NZWalks\.API\.Data\.NZWalksDbContext\.sql$" />
+  </parameter>
+</parameters>
